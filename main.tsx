@@ -1,6 +1,16 @@
 import React, { useState, useEffect } from "react";
 
-const Route = ({ path, component }) => {
+interface Route {
+  path: string;
+  component: React.FC;
+}
+
+interface Link {
+  to: string;
+  children: React.ReactNode;
+}
+
+const Route: React.FC<Route> = ({ path, component }) => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   useEffect(() => {
@@ -10,11 +20,11 @@ const Route = ({ path, component }) => {
     window.addEventListener("navigate", onLocationChange);
     return () => window.removeEventListener("navigate", onLocationChange);
   }, []);
-  return currentPath === path ? component() : null;
+  return currentPath === path ? component({}) : null;
 };
 
-const Link = ({ to, children }) => {
-  const preventReload = (event) => {
+const Link: React.FC<Link> = ({ to, children }) => {
+  const preventReload = (event: any) => {
     event.preventDefault();
     window.history.pushState({}, "", to);
     const navigationEvent = new PopStateEvent("navigate");
