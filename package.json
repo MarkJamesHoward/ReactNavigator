@@ -1,6 +1,6 @@
 {
-  "name": "@markjameshoward/react-router-viewtransitions",
-  "version": "0.0.1-alpha.22",
+  "name": "@markjameshoward/react-navigator",
+  "version": "0.0.1-alpha.2",
   "description": "",
   "main": "./src/main.js",
   "keywords": [],
