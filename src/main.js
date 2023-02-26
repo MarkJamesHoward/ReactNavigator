@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./MissingTypes";
 const Route = ({ path, component }) => {
     const [currentPath, setCurrentPath] = useState(window.location.pathname);
     useEffect(() => {

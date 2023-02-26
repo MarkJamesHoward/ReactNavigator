@@ -2,7 +2,7 @@
   "name": "@markjameshoward/react-router-viewtransitions",
   "version": "0.0.1-alpha.22",
   "description": "",
-  "main": "main.js",
+  "main": "./src/main.js",
   "keywords": [],
   "scripts": {
     "publish": "tsc && npm version prerelease --force && npm publish --access=public"
