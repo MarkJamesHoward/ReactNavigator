@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from "react";
-
-interface Route {
-  path: string;
-  component: React.FC;
-}
-
-interface Link {
-  to: string;
-  children: React.ReactNode;
-}
+import "./MissingTypes";
 
 const Route: React.FC<Route> = ({ path, component }) => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
