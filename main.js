@@ -8,7 +8,7 @@ const Route = ({ path, component }) => {
         window.addEventListener("navigate", onLocationChange);
         return () => window.removeEventListener("navigate", onLocationChange);
     }, []);
-    return currentPath === path ? component() : null;
+    return currentPath === path ? component({}) : null;
 };
 const Link = ({ to, children }) => {
     const preventReload = (event) => {
